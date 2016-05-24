@@ -3,7 +3,7 @@ package com.mycompany;
 public class Main {
 
     public static void main(String[] args) {
-        Animal d = createAnimal("Dog");
+        Animal d = createAnimal("Do");
         Animal s = createAnimal("Snake");
         Animal h = createAnimal("Hawk");
 
@@ -14,9 +14,6 @@ public class Main {
         System.out.println(d);
         System.out.println(s);
         System.out.println(h);
-
-
-
     }
 
     public static Animal createAnimal(String name) {
@@ -28,6 +25,6 @@ public class Main {
             case "Hawk":
                 return new Hawk();
         }
-        return new Animal();
+        return null;
     }
 }

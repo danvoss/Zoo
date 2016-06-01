@@ -7,13 +7,26 @@ public class Main {
         Animal s = createAnimal("Snake");
         Animal h = createAnimal("Hawk");
 
+        //below: an "anonymous class" -- in case we only need the code once, more convenient than creating new
+        // inheritance classes
+
+        Animal a = new Reptile() {
+            @Override
+                public void makeSound() {
+                System.out.println("Croak!");
+            }
+        };
+        a.name = "Alligator";
+
         d.makeSound();
         s.makeSound();
         h.makeSound();
+        a.makeSound();
 
         System.out.println(d);
         System.out.println(s);
         System.out.println(h);
+        System.out.println(a);
     }
 
     public static Animal createAnimal(String name) {

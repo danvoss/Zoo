@@ -18,6 +18,13 @@ public class Main {
         };
         a.name = "Alligator";
 
+        // anonymous function a.k.a. lambda
+        Runnable r = () -> {
+            System.out.println("Hello from lambda!");
+        };
+        r.run();
+        sayHello(r);
+
         d.makeSound();
         s.makeSound();
         h.makeSound();
@@ -39,5 +46,10 @@ public class Main {
                 return new Hawk();
         }
         return null;
+    }
+
+    public static void sayHello(Runnable runnable) {
+        System.out.println("Hello!");
+        runnable.run();
     }
 }

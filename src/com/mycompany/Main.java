@@ -3,7 +3,7 @@ package com.mycompany;
 public class Main {
 
     public static void main(String[] args) {
-        Animal d = createAnimal("Do");
+        Animal d = createAnimal("Dog");
         Animal s = createAnimal("Snake");
         Animal h = createAnimal("Hawk");
 
